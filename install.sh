@@ -1188,14 +1188,14 @@ if [ "$apache" = 'yes' ]; then
 	write_config_value "WEB_SSL_PORT" "8443"
 	write_config_value "WEB_SSL" "mod_ssl"
 	write_config_value "PROXY_SYSTEM" "nginx"
-	write_config_value "PROXY_PORT" "80"
-	write_config_value "PROXY_SSL_PORT" "443"
+	write_config_value "PROXY_PORT" "7080"
+	write_config_value "PROXY_SSL_PORT" "7443"
 	write_config_value "STATS_SYSTEM" "awstats"
 fi
 if [ "$apache" = 'no' ]; then
 	write_config_value "WEB_SYSTEM" "nginx"
-	write_config_value "WEB_PORT" "80"
-	write_config_value "WEB_SSL_PORT" "443"
+	write_config_value "WEB_PORT" "7080"
+	write_config_value "WEB_SSL_PORT" "7443"
 	write_config_value "WEB_SSL" "openssl"
 	write_config_value "STATS_SYSTEM" "awstats"
 fi
